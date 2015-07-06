@@ -55,14 +55,24 @@ function displayMap(lat,lng,cityName){
 		
 		$('.locationheader').html('<h2>'+ data.city.name+' '+data.city.country +'</h2>');
             // weather frame 1
-            html += '<div><h3>'+ data.list[0].temp.max + '°/' +data.list[0].temp.min+'°'+ '</h3>'+'</div>';
+//===================================================================            
+            //for(var i = 0; i <= 3; i +=1 ){
+            //html += '<div><h3>'+ data.list[0].temp.max + '°/' +data.list[0].temp.min+'°'+ '</h3>'+'</div>';
+            //html += '<div><p>'+'<img src="http://openweathermap.org/img/w/'+ data.list[i].weather[0].icon + '.png">'+'</p>'+'</div>';
+	    //    html += '<div><p>'+data.list[i].weather[0].main+': '+ data.list[0].weather[0].description + '</p>'+'</div>';
+	    //    html += '<div><p>'+'Humidity: '+ data.list[i].humidity + '</p>'+'</div>';
+	    //   html += '<div>'+'<p>'+'Wind: '+ data.list[i].speed +' mph' +'</p>'+'</div>';
+	    //    html += '<div>'+'<p>'+'Pressure: '+ data.list[i].pressure + '</p>'+'</div>';
+	    //    $('.weatherframes').html(html);
+		//}
+//====================================================================
+	html += '<div><h3>'+ data.list[0].temp.max + '°/' +data.list[0].temp.min+'°'+ '</h3>'+'</div>';
             html += '<div><p>'+'<img src="http://openweathermap.org/img/w/'+ data.list[0].weather[0].icon + '.png">'+'</p>'+'</div>';
 	        html += '<div><p>'+data.list[0].weather[0].main+': '+ data.list[0].weather[0].description + '</p>'+'</div>';
 	        html += '<div><p>'+'Humidity: '+ data.list[0].humidity + '</p>'+'</div>';
 	        html += '<div>'+'<p>'+'Wind: '+ data.list[0].speed +' mph' +'</p>'+'</div>';
 	        html += '<div>'+'<p>'+'Pressure: '+ data.list[0].pressure + '</p>'+'</div>';
 	        $('.weatherframes').html(html);
-
 	        // weather frame 2
             html = '<div>'+'<h3>'+ data.list[1].temp.max + '°/' +data.list[1].temp.min+'° '+'</h3>'+'</div>';
             html += '<div>'+'<p>'+'<img src="http://openweathermap.org/img/w/'+ data.list[1].weather[0].icon + '.png">'+'</p>'+'</div>';
